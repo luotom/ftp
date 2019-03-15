@@ -3,13 +3,13 @@ Description=Gunicorn instance to server FTP
 After=syslog.target network.target
 
 [Service]
-User=lv
-Group=lv
+User=teaching
+Group=teaching
 Type=forking
-PIDFile=/home/teaching/pysite/run/app.pid
-WorkingDirectory=/home/teaching/pysite
-ExecStart=/home/teaching/pysite/webservers/start.sh
-ExecStop=/home/teaching/pysite/webservers/stop.sh
+PIDFile=/home/teaching/ftp/run/app.pid
+WorkingDirectory=/home/teaching/ftp
+ExecStart=/home/teaching/ftp/webservers/start.sh
+ExecStop=/home/teaching/ftp/webservers/stop.sh
 PrivateTmp=true
 
 [Install]
