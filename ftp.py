@@ -28,7 +28,6 @@ def get_teacher_msgs():
 
 
 def main():
-    # 新建一个用户组
     users = DummyAuthorizer()
     handler = FTPHandler
     users.add_anonymous("/home/teaching/app", perm="el")
