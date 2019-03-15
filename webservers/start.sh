@@ -15,4 +15,4 @@ source "$VENV/bin/activate"
 
 cd "$APPDIR"
 
-python ftp.py
+nohup python -u ftp.py &
