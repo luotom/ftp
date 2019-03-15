@@ -1,0 +1,39 @@
+参考资料：
+Successfully installed pyftpdlib-1.5.4
+https://www.cnblogs.com/botoo/p/8194671.html
+https://pyftpdlib.readthedocs.io/en/latest/tutorial.html#windows-ftp-server
+在windows下用IE下载、上传才正常
+1. 读取权限
+
+"e" =更改目录（CWD，CDUP命令）
+
+"l" =列表文件（LIST，NLST，STAT，MLSD，MLST，SIZE命令）
+
+"r" =从服务器检索文件（RETR命令）
+
+写入权限：
+
+"a" =将数据追加到现有文件（APPE命令）
+
+"d" =删除文件或目录（DELE，RMD命令）
+
+"f" =重命名文件或目录（RNFR，RNTO命令）
+
+"m" =创建目录（MKD命令）
+
+"w" =将文件存储到服务器（STOR，STOU命令）
+
+"M"=更改文件模式/权限（SITE CHMOD命令）
+
+"T"=更改文件修改时间（SITE MFMT命令）
+
+
+2. 汉字文件夹出现乱码
+
+3. 开发一个支持多用户在线的FTP程序https://www.cnblogs.com/wj-1314/p/8707787.html
+ 功能全部用python的基础知识实现,用到了socket\hashlib\configparse\os\sys\pickle\函数\模块\类知识
+
+
+
+4. 基于线程开发一个ftp服务器https://zzk.cnblogs.com/s?w=blog%3Awj-1314%20ftp
+
