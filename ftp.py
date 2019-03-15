@@ -45,7 +45,7 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='./log/ftpsever.log', level=logging.DEBUG)
+    # logging.basicConfig(filename='./log/ftpsever.log', level=logging.DEBUG)
     main_handler = main()
     server = FTPServer(sever_ip, main_handler)
     server.max_cons = max_cons
