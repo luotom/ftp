@@ -31,14 +31,14 @@ def main():
     # 新建一个用户组
     users = DummyAuthorizer()
     handler = FTPHandler
-    users.add_anonymous("/home/teaching/ftp", perm="el")
+    users.add_anonymous("/home/teaching/app", perm="el")
     results = get_teacher_msgs()
     if results:
         for row in results:
-            users.add_user(row[0], row[1], f"/home/teaching/ftp/{row[2]}", perm="elrwdmf")
-            users.override_perm('anonymous', f"/home/teaching/ftp/{row[2]}/上传",
+            users.add_user(row[0], row[1], f"/home/teaching/app/{row[2]}", perm="elrwdmf")
+            users.override_perm('anonymous', f"/home/teaching/app/{row[2]}/上传",
                                 perm="elw", recursive=True)
-            users.override_perm('anonymous', f"/home/teaching/ftp/{row[2]}/下载",
+            users.override_perm('anonymous', f"/home/teaching/app/{row[2]}/下载",
                                 perm="elr", recursive=True)
     handler.authorizer = users
     return handler
