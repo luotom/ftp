@@ -30,6 +30,8 @@ def get_teacher_msgs():
 def main():
     users = DummyAuthorizer()
     handler = FTPHandler
+    #增加被动端口
+    handler.passive_ports = range(2022, 2024)
     users.add_anonymous("/home/teaching/app", perm="el")
     results = get_teacher_msgs()
     if results:
