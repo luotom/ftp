@@ -35,6 +35,7 @@ def main():
     if results:
         for row in results:
             users.add_user(row[0], row[1], f"/home/teaching/app/{row[2]}", perm="elrwdmf")
+            # 赋予匿名用户不同文件下不同的权限
             users.override_perm('anonymous', f"/home/teaching/app/{row[2]}/上传",
                                 perm="elw", recursive=True)
             users.override_perm('anonymous', f"/home/teaching/app/{row[2]}/下载",
@@ -44,6 +45,7 @@ def main():
 
 
 if __name__ == '__main__':
+    # 将输出写入日志中
     logging.basicConfig(filename='./log/ftpsever.log', level=logging.DEBUG)
     main_handler = main()
     server = FTPServer(sever_ip, main_handler)
